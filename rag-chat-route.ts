@@ -25,7 +25,7 @@ export async function POST(req: Request) {
           execute: async ({ query }: { query: string }) => {
             
             console.log('Searching documents for query:', query);
-            // Generate embedding for the query
+
             const { embedding } = await embed({
               model: openai.textEmbeddingModel("text-embedding-3-small"),
               value: query,
